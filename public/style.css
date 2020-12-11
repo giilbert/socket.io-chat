@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#message-view {
+    position: relative;
+    top: 5vh;
+    width: 80vw;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+#message-view ul {
+    list-style: none;
+}
+
+#message-view ul li {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#message-view ul li:nth-child(odd) {
+    background-color: #ccc;
+}
+
+
+#message-input {
+    position: relative;
+    top: 20px;
+}
+
+#message-input input {
+    font-size: 20px;
+    border-style: solid;
+    border-width: 2px;
+    outline: none;
+    width: 80vw;
+    height: 30px;
+    padding-left: 10px;
+}
+
+
+#choose-username {
+    width: 120vw;
+    height: 120vh;
+    z-index: 2;
+
+    background-color: #111d;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+}
+
+#choose-username-bg {
+    transform: translate(-50%, -50%);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: #ccc;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#choose-username-bg form {
+    text-align: center;
+}
+
+#choose-username-bg form input {
+    height: 30px;
+    width: 200px;
+    outline: none;
+    border-color: black;
+    border-style: solid;
+    border-radius: 0;
+    padding-left: 10px;
+}
+
+#choose-username form button {
+    width: 80px;
+    height: 30px;
+    border-radius: 0;
+    border-color: black;
+    border-width: 2px;
+    outline: none;
+}
+
+#choose-username form button:hover {
+    cursor: pointer;
+}
+
+#info {
+    position: relative;
+    top: 30px;
+    width: 80vw;
+}
