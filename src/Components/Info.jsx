@@ -11,6 +11,12 @@ export default class Info extends React.Component {
                 peopleOnline: m,
             });
         });
+
+        this.onClick = this.onClick.bind(this)
+    }
+
+    onClick() {
+        localStorage.clear();
     }
 
     render() {
@@ -25,8 +31,21 @@ export default class Info extends React.Component {
                         whiteSpace: 'nowrap',
                     }}
                 >
+
                     {this.state.peopleOnline} {word} online
                     {'  •  '.replace(/ /g, '\u00A0\u00A0')}
+
+                    <a 
+                        href=""
+                        style={{
+                            textDecoration: 'none',
+                            color: 'rgb(88, 166, 255)'
+                        }}
+                        onClick={this.onClick}
+                    >reset username</a>
+
+                    {'  •  '.replace(/ /g, '\u00A0\u00A0')}
+
                     <img
                         src="GitHubLogo.png"
                         style={{
@@ -48,6 +67,18 @@ export default class Info extends React.Component {
                         {' '}
                         source code on GitHub
                     </a>
+                    
+                    {'  •  '.replace(/ /g, '\u00A0\u00A0')}
+
+                    <a 
+                        href="https://reactjs.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            textDecoration: 'none',
+                            color: 'rgb(88, 166, 255)'
+                        }}
+                    >💙React</a>
                 </p>
             </div>
         );

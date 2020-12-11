@@ -23,10 +23,17 @@ var Info = function (_React$Component) {
                 peopleOnline: m
             });
         });
+
+        _this.onClick = _this.onClick.bind(_this);
         return _this;
     }
 
     _createClass(Info, [{
+        key: 'onClick',
+        value: function onClick() {
+            localStorage.clear();
+        }
+    }, {
         key: 'render',
         value: function render() {
             var word = void 0;
@@ -47,6 +54,19 @@ var Info = function (_React$Component) {
                     ' ',
                     word,
                     ' online',
+                    '  •  '.replace(/ /g, '\xA0\xA0'),
+                    React.createElement(
+                        'a',
+                        {
+                            href: '',
+                            style: {
+                                textDecoration: 'none',
+                                color: 'rgb(88, 166, 255)'
+                            },
+                            onClick: this.onClick
+                        },
+                        'reset username'
+                    ),
                     '  •  '.replace(/ /g, '\xA0\xA0'),
                     React.createElement('img', {
                         src: 'GitHubLogo.png',
@@ -70,6 +90,20 @@ var Info = function (_React$Component) {
                         },
                         ' ',
                         'source code on GitHub'
+                    ),
+                    '  •  '.replace(/ /g, '\xA0\xA0'),
+                    React.createElement(
+                        'a',
+                        {
+                            href: 'https://reactjs.org/',
+                            target: '_blank',
+                            rel: 'noopener noreferrer',
+                            style: {
+                                textDecoration: 'none',
+                                color: 'rgb(88, 166, 255)'
+                            }
+                        },
+                        '\uD83D\uDC99React'
                     )
                 )
             );
