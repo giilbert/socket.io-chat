@@ -22,6 +22,7 @@ export default class ChooseUsername extends React.Component {
         window.currentUsername = this.state.currentAlias;
         localStorage.setItem('username', this.state.currentAlias)
         this.forceUpdate();
+        window.io.emit('X-connect', this.state.currentAlias);
     }
 
     render() {

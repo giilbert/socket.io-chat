@@ -103,7 +103,7 @@ var Info = function (_React$Component) {
                                 color: 'rgb(88, 166, 255)'
                             }
                         },
-                        '\uD83D\uDC99React'
+                        '\uD83D\uDC99Made using React'
                     )
                 )
             );

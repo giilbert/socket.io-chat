@@ -28,6 +28,10 @@ var App = function (_React$Component) {
         window.currentUsername = localStorage.getItem('username');
 
         window.io = io(window.SERVER_URL);
+
+        if (window.currentUsername) {
+            window.io.emit('X-connect', window.currentUsername);
+        }
         return _this;
     }
 

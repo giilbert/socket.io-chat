@@ -48,6 +48,17 @@ var MessageView = function (_React$Component) {
             div.scrollTop = div.scrollHeight;
         });
 
+        window.io.on('X-connect', function (alias) {
+            console.log(alias);
+            _this.setState({
+                messages: _this.state.messages.concat({
+                    author: 'System',
+                    content: '\uD83D\uDEAA\u200B\u27A1\uFE0F\uFE0F\u200B ' + alias + ' has connected',
+                    time: Date.now()
+                })
+            });
+        });
+
         return _this;
     }
 

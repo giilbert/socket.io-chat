@@ -41,6 +41,17 @@ export default class MessageView extends React.Component {
             div.scrollTop = div.scrollHeight;
         })
 
+        window.io.on('X-connect', alias => {
+            console.log(alias)
+            this.setState({
+                messages: this.state.messages.concat({
+                    author: 'System',
+                    content: `🚪​➡️️​ ${alias} has connected`,
+                    time: Date.now()
+                })
+            })
+        })
+
     }
 
     render() {

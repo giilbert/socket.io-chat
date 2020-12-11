@@ -78,7 +78,7 @@ export default class Info extends React.Component {
                             textDecoration: 'none',
                             color: 'rgb(88, 166, 255)'
                         }}
-                    >💙React</a>
+                    >💙Made using React</a>
                 </p>
             </div>
         );

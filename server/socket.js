@@ -19,6 +19,11 @@ io.on('connection', socket => {
         require('./data').appendMessage(msg)
     })
 
+    socket.on('X-connect', alias => {
+        console.log(alias)
+        io.emit('X-connect', alias);
+    })
+
     socket.on('disconnect', () => {
         global.users--;
         updatePlayers();
