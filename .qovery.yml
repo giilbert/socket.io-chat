@@ -1,0 +1,11 @@
+---
+application:
+  name: "socket-io-chat"
+  project: "nodejs-test"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-socket-io-chat"
+  routes:
+  - application_name: "socket-io-chat"
+    paths:
+    - "/*"
